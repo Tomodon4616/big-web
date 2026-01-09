@@ -1,0 +1,28 @@
+{
+    "projects": [
+        {
+        "name": "Energy Spectra Alignment (CMDA Capstone)",
+        "description": "Developed a web application using Flask and Plotly to visualize and align energy spectra data from BoostAR detectors, enhancing data analysis capabilities for radiation detection.",
+        "technologies": ["Python", "Jupyter Notebook"],
+        "date": "09/2025 - 12/2025"
+        },
+        {
+        "name": "Portfolio Website",
+        "description": "A personal portfolio website to showcase my projects and skills, also the website you are currently visiting.",
+        "technologies": ["HTML", "CSS", "JavaScript"],
+        "date": "11/2025"
+        },
+        {
+            "name": "Wordle Solver",
+            "description": "Uses Requests, Selenium, and BeautifulSoup to navigate to the Wordle game, input guesses, and scrape results to help solve the puzzle.",
+            "technologies": ["Python"],
+            "date": "08/2025"
+        },
+        {
+        "name": "Media Bias & Stance Analysis of Russian-Ukraine Conflict",
+        "description": "Developed a Natural Language Processing (NLP) classification model in Jupyter Notebooks, utilizing Sentiment Analysis and TF-IDF, to quantitatively differentiate and predict the geopolitical stance (pro-Russian vs. pro-Ukrainian) of news articles",
+        "technologies": ["Python", "Jupyter Notebook"],
+        "date": "04/2025"
+        }
+    ]
+}

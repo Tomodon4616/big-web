@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <title>Tom Vija</title>
+</head>
+<body>
+    <main class="main-container">
+    <span class="ball-wrapper">
+            <span class="ball"></span>
+            <span class="ball"></span>
+            <span class="ball"></span>
+            <span class="ball"></span>
+            <span class="ball"></span>
+            <span class="ball"></span>
+        </span>
+    <section class="hero fade-section" data-color="#000000">
+        
+
+        <div class="intro">
+            <div class="name">Hello, I am Tom Vija</div>
+            <div class="tagline">Building intelligent data solutions with analytics and innovative algorithms.</div>
+            <p class="description">
+                Data isn't just about numbers — it's about insights, the stories they tell, and the results they reveal.
+                As a senior at Virginia Tech studying Computational Modeling & Data Analytics (CMDA), I enjoy working on 
+                projects that reveal the hidden structures and trends in the world around us. 
+                By analyzing data and designing algorithms, I aim to uncover these patterns and turn them into actionable, 
+                meaningful solutions.
+            </p>
+        </div>
+
+        <div class="graphs">
+            <img id="plot-display" src="" alt="Rotating Plot">
+        </div>
+
+    </section>
+
+    <section class="about fade-section">
+    About <span class="highlight">Me</span>
+    <container class="about-container">
+    <div class="my-wrapper">
+        <div class="personal-paragraph">
+            <h5 class="story">Who am I?</h5>
+            <p>I was born in Tallinn, Estonia, 
+                and my family moved to the U.S. 
+                chasing bigger opportunities. I first 
+                got hooked on data through video games—I 
+                loved anything that let me optimize stats or 
+                squeeze out better performance. 
+                Eventually that interest spilled 
+                into real life, and I started noticing
+                 how data is everywhere and how it can be
+                 used to understand the everyday things going on around us.
+            </p>
+        </div>
+
+        <div class="skills">
+    <h5 class="skill-title">Skills:</h5>
+
+    <!-- Duplicate for more -->
+
+    <div class="skill-item">
+        <img src="images/py.png" alt="Python Logo" class="skill-logo">
+        <div class="skill-info">
+            <span class="skill-name">Python</span>
+            <div class="skill-bar">
+                <div class="skill-fill" style="--level: 0.90;"></div>
+            </div>
+            </div>
+            <span class="skill-score">9 / 10</span>
+        </div>
+
+    <div class="skill-item">
+        <img src="images/java logo.png" alt="Java Logo" class="skill-logo">
+        <div class="skill-info">
+            <span class="skill-name">Java</span>
+            <div class="skill-bar">
+                <div class="skill-fill" style="--level: 0.70;"></div>
+            </div>
+        </div>
+        <span class="skill-score">7 / 10</span>
+    </div>
+
+
+    <div class="skill-item">
+        <img src="images/R.png" alt="R Logo" class="skill-logo">
+        <div class="skill-info">
+            <span class="skill-name">R</span>
+            <div class="skill-bar">
+                <div class="skill-fill" style="--level: 0.50;"></div>
+            </div>
+            </div>
+            <span class="skill-score">5 / 10</span>
+        </div>
+
+    <div class="skill-item">
+        <img src="images/C.png" alt="R Logo" class="skill-logo">
+        <div class="skill-info">
+            <span class="skill-name">C</span>
+            <div class="skill-bar">
+                <div class="skill-fill" style="--level: 0.70;"></div>
+            </div>
+            </div>
+            <span class="skill-score">7 / 10</span>
+        </div>
+    </div>
+    </container>
+    </section>
+
+    <section class="projects fade-section" data-color="#222222">
+        <h2 class="project-title">My <span class="highlight">Projects</span></h2>
+
+        <div id="timeline">
+            <div class="timeline-line"></div>
+            <div id="timeline-items"></div>
+        </div>
+    </section>
+
+    <!-- <section class="references fade-section" data-color="#333333">
+        References
+    </section> -->
+
+    
+    <section class="contact fade-section" data-color="#111111">
+        <container class="contact-container">
+    <div class="contact-header">Since you made it this far, <span class="highlight">let’s talk:</span></div>
+
+    <div class="contact-grid">
+        <a href="https://github.com/Tomodon4616" class="contact-item", target="_blank" rel="noopener noreferrer">
+            <img src="images/github.png" alt="GitHub">
+            <span>GitHub</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/tom-vija-540a972a7/" class="contact-item", target="_blank" rel="noopener noreferrer">
+            <img src="images/linkedin.png" alt="LinkedIn">
+            <span>LinkedIn</span>
+        </a>
+
+        <a href="mailto:tomvija@gmail.com" class="contact-item">
+            <img src="images/email.png" alt="Email">
+            <span>tomvija@gmail.com</span>
+        </a>
+
+        <a href="files/resume.pdf" class="contact-item" target="_blank" rel="noopener noreferrer">
+            <img src="images/resume.png" alt="Resume">
+            <span>Resume</span>
+        </a>
+    </div>
+    </container>
+</section>
+
+
+
+    <script src="script.js"></script>
+    <script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    }, {
+        threshold: 0.3   // triggers when at least 30% of section is visible
+    });
+
+    document.querySelectorAll(".fade-section").forEach(section => {
+        observer.observe(section);
+    });
+    </script>
+    </main>
+</body>
+</html>
