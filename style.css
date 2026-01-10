@@ -382,7 +382,7 @@ p { font-size:clamp(1.3rem,1.6vw,2.5rem); padding:10px; font-weight:lighter; }
 
 /* -------------------- MEDIA QUERIES -------------------- */
 @media (max-width:1000px) {
-  .intro { width:80%; left:10%; top:5%; padding:10px; }
+  .intro { width:100%; left:0%; top:5%; padding:10px; }
   .name { font-size: clamp(2rem, 8vw, 3.5rem); text-align:center; line-height:1.2; display:block; white-space:normal;}
   .tagline { width:100%; text-align:center; font-size:1.25rem; top:15px; }
   .description { width:100%; text-align:center; font-size:1rem; top:10%; margin-top:30px; }
@@ -407,9 +407,10 @@ p { font-size:clamp(1.3rem,1.6vw,2.5rem); padding:10px; font-weight:lighter; }
   }
 
   .about { padding:40px 20px; min-height:auto; }
-  .my-wrapper { flex-direction:column; width:100%; height:auto; align-items:center;}
-  .personal-paragraph, .skills{ height:auto; width:100%; margin:10px 0; align-self:center; }
-  .story{ font-size: clamp(2rem, 8vw, 3rem); }
+  .my-wrapper { flex-direction:column; width:100%; height:auto; align-items:center; font-size: 2rem;}
+
+  .personal-paragraph, .skills{ height:auto; width:105%; margin:10px 0; align-self:center; padding: 25px 4vw; }
+  .story{ font-size: clamp(2rem, 8vw, 3rem);}
   .skill-item { gap:12px; margin:14px 0; }
   .skill-logo { width:48px; height:48px; flex:0 0 48px; }
   .skill-info { flex:1 1 auto; min-width:0; }
@@ -417,14 +418,15 @@ p { font-size:clamp(1.3rem,1.6vw,2.5rem); padding:10px; font-weight:lighter; }
   .skill-score { flex:0 0 56px; width:56px; font-size:0.95rem; margin-left:6px; opacity:0.85; }
   p { font-size:1.5rem; }
 
+  .project-title { font-size:3rem; }
   /* TIMELINE MOBILE */
-  #timeline { width:90%; padding:0; }
-  #timeline-items { width:100%; transform:none; justify-content:center;  }
+  #timeline { width:100%; padding:0; }
+  #timeline-items { width:100%; transform:none; justify-content:center; left: -5vw;}
   .timeline-item::before, .timeline-item::after, .timeline-line { display:none; }
   .timeline-item { left:0 !important; right:0 !important; width:calc(100% - 25px); transform:none !important; margin:15px; }
   
   /* CONTACT MOBILE */
-  .contact-container {transform: translate(-50%,10%)}
+  .contact-container {transform: translate(-50%,0%)}
   .contact-header {font-size: clamp(1rem, 6vw, 2rem);}
   .contact-grid { grid-template-columns:1fr; width:80%; margin-bottom:25px; }
 }

@@ -51,29 +51,34 @@ document.querySelectorAll("section").forEach(sec => {
 
 // Smooth slowed-down scrolling
 document.addEventListener("wheel", (event) => {
-
-    // If the page is too short, don't block scrolling
     if (document.body.scrollHeight <= window.innerHeight) return;
 
     event.preventDefault();
 
-    const speed = 1; // your scroll slowing factor
+    const speed = 2; // <1 slows it down
     window.scrollBy({
-        top: event.deltaY * speed,
-        behavior: "smooth"
+        top: event.deltaY * speed
     });
 
 }, { passive: false });
 
 
+
 let plots = [];
 let current = 0;
 const img = document.getElementById("plot-display");
+let preloadedImages = [];
 
 fetch("plots.json")
   .then(r => r.json())
   .then(data => {
     plots = data.plots;
+
+    preloadedImages = plots.map(src => {
+      const image = new Image();
+      image.src = src;
+      return image;
+    });
     if (plots.length > 0) startRotation();
   });
 
